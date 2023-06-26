@@ -3,6 +3,9 @@
 * {
     margin: 0;
 }
+*:focus{
+    outline: 4px double hsl(259, 100%, 65%);
+}
 
 body {
     background: hsl(0, 0%, 94%);
@@ -40,15 +43,14 @@ input {
     caret-color: hsl(259, 100%, 65%);
     caret-shape: block;
     font-family: 'Poppins', sans-serif;
-    font-size: 20px;
+    font-size: 24px;
     padding-left: 10px;
     color: hsl(0, 0%, 8%);
     letter-spacing: 1px;
     /* font-weight: 800; */
 }
-/* input:focus {
-    
-} */
+
+
 
 .input-block {
     display: flex;
@@ -95,6 +97,10 @@ hr {
     top: -35px;
     color:hsl(0, 0%, 100%);
     font-size: 36px;
+    display: flex;
+    height: 70px;
+    justify-content: center;
+    align-items: center;
 }
 
 .submit-btn:hover {
@@ -157,12 +163,16 @@ hr {
     }
     input {
         width: 80px;
-        font-size: 15px;
+        font-size: 20px;
     }
     .result {
         font-size: 32px;
     }
     .submit-btn {
         font-size: 30px;
+        top: -32px;
+    }
+    .attribution{
+        font-size: 12px;
     }
 }

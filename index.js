@@ -3,6 +3,7 @@ let day = document.querySelector("#day");
 let month = document.querySelector("#month");
 let year = document.querySelector("#year");
 
+
 // button
 let btn = document.querySelector(".submit-btn");
 
@@ -20,6 +21,10 @@ let y2 = today.getFullYear();
 
 let monthList = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
+year.setAttribute("max",y2);
+
+
+
 btn.addEventListener("click", () => {
     // user input values
     d1 = parseInt(day.value);
@@ -28,12 +33,15 @@ btn.addEventListener("click", () => {
 
     console.log(`DOB = ${d1}-${m1}-${y1}`);
     console.log(`Current Date = ${d2}-${m2}-${y2}`);
-25
+
     if(d1==d2){
         btn.value ="🥳";
     }
+    else{
+        btn.value = ">";
+    }
 
-    if(d1){
+    if(d1&&m1&&y1){
         // 08-5-2023 -- d2/m2/yyyy
         // 24-11-2002 --day/month/year
         // 14-5-20
@@ -62,6 +70,12 @@ btn.addEventListener("click", () => {
         yearInp.innerText = "- -";
     }
 
+    
+    // clearing the input values after pressing submit button.
+    day.value = "";
+    month.value = "";
+    year.value = "";
+
 })
 
 
@@ -71,8 +85,4 @@ btn.addEventListener("click", (e) => {
     e.preventDefault();
     console.log("not refreshed");
 
-    // clearing the input values after pressing submit button.
-    day.value = "";
-    month.value = "";
-    year.value = "";
 })
