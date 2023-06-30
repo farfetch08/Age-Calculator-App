@@ -52,16 +52,19 @@ btn.addEventListener("click", () => {
             dayInp.innerText = d2-d1;
             m2--;
         }
+        else {
+            dayInp.innerText = d2-d1;
+        }
         
         if(m2<m1){
             m2+=12;
             monthInp.innerText = m2-m1;
             y2--;
         }
-        
+        else{
+            monthInp.innerText = m2-m1;
+        }
 
-        dayInp.innerText = d2-d1;
-        monthInp.innerText = m2-m1;
         yearInp.innerText = y2-y1;
     }
     else{
