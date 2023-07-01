@@ -21,6 +21,9 @@ let y2 = today.getFullYear();
 
 let monthList = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
+let labelInput = document.querySelectorAll(".label-input");
+let promptTxt = document.querySelectorAll(".prompt-txt");
+
 year.setAttribute("max",y2);
 
 
@@ -67,10 +70,41 @@ btn.addEventListener("click", () => {
 
         yearInp.innerText = y2-y1;
     }
+    
+    if(!d1){
+        labelInput[0].style.color = "#f01313";
+        promptTxt[0].innerText = "This field is required";
+    }
+    if(d1<1 || d1>31){
+        labelInput[0].style.color = "#f01313";
+        promptTxt[0].innerText = "Must be a valid day";
+    }
+    if(!m1){
+        labelInput[1].style.color = "#f01313";
+        promptTxt[1].innerText = "This field is required";
+    }
+    if(m1<1 || m1>12){
+        labelInput[1].style.color = "#f01313";
+        promptTxt[1].innerText = "Must be a valid month";
+    }
+    if(!y1){
+        labelInput[2].style.color = "#f01313";
+        promptTxt[2].innerText = "This field is required";
+    }
+    if(y1<1 || y1>y2){
+        labelInput[2].style.color = "#f01313";
+        promptTxt[2].innerText = "Must be in the past";
+    }
+
+    
     else{
         dayInp.innerText = "- -";
         monthInp.innerText = "- -";
         yearInp.innerText = "- -";
+        // for(let i=0; i<labelInput.length; i++){
+        //     labelInput[i].style.color = "#f01313";
+        //     promptTxt[i].innerText = "This field is required";
+        // }
     }
 
     
@@ -89,3 +123,5 @@ btn.addEventListener("click", (e) => {
     console.log("not refreshed");
 
 })
+
+
