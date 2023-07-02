@@ -42,6 +42,8 @@ btn.addEventListener("click", () => {
         promptTxt[0].innerText = "Happy😊";
         promptTxt[1].innerText = "Birthday🍰";
         promptTxt[2].innerText = "Day!🎉";
+        labelInput[0].style.color = "hsl(0, 1%, 44%)";
+        labelInput[1].style.color = "hsl(0, 1%, 44%)";
         labelInput[2].style.color = "hsl(0, 1%, 44%)";
         for (let i = 0; i < 3; i++) {
             promptTxt[i].classList.add("birthday-txt");
