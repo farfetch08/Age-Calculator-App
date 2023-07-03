@@ -51,6 +51,12 @@ btn.addEventListener("click", () => {
     }
     else {
         btn.value = ">";
+        promptTxt[0].innerText = "";
+        promptTxt[1].innerText = "";
+        promptTxt[2].innerText = "";
+        for (let i = 0; i < 3; i++) {
+            promptTxt[i].classList.remove("birthday-txt");
+        }
     }
 
     if (d1 && m1 && y1) {
