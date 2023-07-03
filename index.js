@@ -84,6 +84,10 @@ btn.addEventListener("click", () => {
         }
 
         yearInp.innerText = y2 - y1;
+        
+        labelInput[0].style.color = "hsl(0, 1%, 44%)";
+        labelInput[1].style.color = "hsl(0, 1%, 44%)";
+        labelInput[2].style.color = "hsl(0, 1%, 44%)";
     }
     else {
         dayInp.innerText = "- -";
