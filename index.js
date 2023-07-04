@@ -37,6 +37,7 @@ btn.addEventListener("click", () => {
     console.log(`DOB = ${d1}-${m1}-${y1}`);
     console.log(`Current Date = ${d2}-${m2}-${y2}`);
 
+    // Birthday prompt
     if ((d1 == d2) && (m1 == m2 )&& y1  && (y1>1 && y1<y2)) {
         btn.value = "🥳";
         promptTxt[0].innerText = "Happy😊";
@@ -50,7 +51,6 @@ btn.addEventListener("click", () => {
         }
     }
     else {
-        btn.value = ">";
         promptTxt[0].innerText = "";
         promptTxt[1].innerText = "";
         promptTxt[2].innerText = "";
