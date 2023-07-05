@@ -38,8 +38,11 @@ btn.addEventListener("click", () => {
     console.log(`Current Date = ${d2}-${m2}-${y2}`);
 
     // Birthday prompt
-    if ((d1 == d2) && (m1 == m2 )&& y1  && (y1>1 && y1<y2)) {
+
+    if ((d1 == d2) && (m1 == m2) && y1 && (y1 > 1 && y1 < y2)) {
         btn.value = "🥳";
+        btn.style.background = "#141414";
+        document.querySelector(".arrow-icon").style.visibility = "hidden";
         promptTxt[0].innerText = "Happy😊";
         promptTxt[1].innerText = "Birthday🍰";
         promptTxt[2].innerText = "Day!🎉";
@@ -57,12 +60,12 @@ btn.addEventListener("click", () => {
         for (let i = 0; i < 3; i++) {
             promptTxt[i].classList.remove("birthday-txt");
         }
+        document.querySelector(".arrow-icon").style.visibility = "visible";
+        btn.value = "";
     }
 
     if (d1 && m1 && y1) {
-        // 08-5-2023 -- d2/m2/yyyy
-        // 24-11-2002 --day/month/year
-        // 14-5-20
+
 
         // calc output values   
         if (d2 < d1) {
@@ -84,7 +87,7 @@ btn.addEventListener("click", () => {
         }
 
         yearInp.innerText = y2 - y1;
-        
+
         labelInput[0].style.color = "hsl(0, 1%, 44%)";
         labelInput[1].style.color = "hsl(0, 1%, 44%)";
         labelInput[2].style.color = "hsl(0, 1%, 44%)";
